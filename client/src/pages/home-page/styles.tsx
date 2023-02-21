@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import { styled } from '@mui/material';
 
-export const HouseGrid = styled('div')(({ theme }) => ({
+export const GamesGrid = styled('div')(({ theme }) => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(1, 1fr)',
   gap: theme.spacing(2),

@@ -8,9 +8,9 @@ import {
   Button,
 } from '@mui/material';
 
-type HouseCardProps = HouseModel;
+type GamesCardProps = GamesModel;
 
-const HouseCard: React.FC<HouseCardProps> = ({
+const GamesCard: React.FC<GamesCardProps> = ({
   title,
   information,
   image,
@@ -34,4 +34,4 @@ const HouseCard: React.FC<HouseCardProps> = ({
   </Card>
 );
 
-export default HouseCard;
+export default GamesCard;
