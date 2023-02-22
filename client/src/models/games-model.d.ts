@@ -10,4 +10,3 @@ type GamesModel = {
   image: string[];
   metacritic: number;
 };
-

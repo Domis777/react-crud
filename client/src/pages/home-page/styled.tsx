@@ -1,11 +1,11 @@
 /* eslint-disable import/prefer-default-export */
-import { styled } from '@mui/material';
+import { styled, Card } from '@mui/material';
 
 export const GamesGrid = styled('div')(({ theme }) => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(1, 1fr)',
   gap: theme.spacing(2),
-  padding: theme.spacing(2),
+  padding: theme.spacing(2, 0),
   maxWidth: theme.breakpoints.values.xl,
   margin: 'auto',
   [theme.breakpoints.up('sm')]: {
@@ -17,4 +17,14 @@ export const GamesGrid = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
     gridTemplateColumns: 'repeat(4, 1fr)',
   },
+}));
+
+export const VideoGameCard = styled(Card)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  padding: theme.spacing(1),
+  borderRadius: '15px',
+  boxShadow: `5px 5px 10px 0 ${theme.palette.common.black}`,
+  border: `4px solid ${theme.palette.primary.main}`,
 }));

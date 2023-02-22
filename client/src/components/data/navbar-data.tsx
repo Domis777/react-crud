@@ -1,4 +1,4 @@
-import routes, { type RouteLink } from 'navigation/routes';
+import { type RouteLink, routes } from 'navigation/routes';
 import { Breakpoint } from '@mui/material';
 
 export type Link = {
@@ -16,12 +16,12 @@ export const mainLinks = [
 ];
 
 export const linksGroups: LinksGroup[] = [
-  {
-    title: 'Title',
-    links: [
-      { to: routes.HomePage, text: 'Introduction' },
-    ],
-  },
+  // {
+  //   title: 'Title',
+  //   links: [
+  //     { to: routes.GameFormPage, text: 'GameFormPage' },
+  //   ],
+  // },
 ];
 
 export const extendBr: Breakpoint = 'md';

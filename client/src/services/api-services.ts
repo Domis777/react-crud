@@ -14,9 +14,15 @@ const fetchGames = async () => {
 
   return response.data;
 };
+const fetchGame = async (id: string | number) => {
+  const response = await api.get<GamesModel>(`/videoGames/${id}`);
+
+  return response.data;
+};
 
 const ApiService = {
   fetchGames,
+  fetchGame,
 };
 
 export default ApiService;

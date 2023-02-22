@@ -1,8 +1,10 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import HomePage from 'pages/home-page';
 import NavbarLayout from 'components/layouts/navbar-layout';
-import routes from './routes';
+import SingleGamePage from 'pages/single-game-page';
+import HomePage from 'pages/home-page/index';
+import GameFormPage from 'pages/game-form-page/index';
+import { routes, routesPath } from './routes';
 
 const router = createBrowserRouter([
   {
@@ -12,6 +14,14 @@ const router = createBrowserRouter([
       {
         path: routes.HomePage,
         element: <HomePage />,
+      },
+      {
+        path: routesPath.SingleGamePage.path,
+        element: <SingleGamePage />,
+      },
+      {
+        path: routes.GameFormPage,
+        element: <GameFormPage />,
       },
     ],
   },
