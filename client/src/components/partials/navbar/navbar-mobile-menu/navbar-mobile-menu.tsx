@@ -1,6 +1,9 @@
 import React from 'react';
 import {
-  Toolbar, Drawer, MenuList, type AccordionProps,
+  Toolbar,
+  Drawer,
+  MenuList,
+  type AccordionProps,
 } from '@mui/material';
 import { useLocation } from 'react-router-dom';
 import { extendBr, linksGroups, mainLinks } from '../../../data/navbar-data';

@@ -3,7 +3,7 @@ import {
   Accordion, AccordionProps, AccordionSummary, AccordionDetails, Typography,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { LinksGroup } from '../../data/navbar-data';
+import { LinksGroup } from '../../../data/navbar-data';
 import NavbarMobileLink from './navbar-mobile-link';
 
 type NavbarMobileMenuAccordionProps = LinksGroup & {

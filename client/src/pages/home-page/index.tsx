@@ -4,7 +4,7 @@ import { Container, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import GamesCard from './games-card';
 import * as Styled from './styled';
-import { routes } from '../../navigation/routes';
+import routes from '../../navigation/routes';
 
 const HomePage = () => {
   const [games, setGames] = React.useState<GamesModel[]>([]);

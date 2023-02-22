@@ -1,16 +1,23 @@
 const singleGameRoot = '/videoGames/';
 
-export const routes = {
+const staticRoutes = {
   HomePage: '/',
   GameFormPage: '/game-form',
 } as const;
 
-export const routesPath = {
+const dinamicRoutes = {
   SingleGamePage: {
     path: `${singleGameRoot}:id`,
     createLink: (id: string | number) => `${singleGameRoot}${id}`,
   },
 } as const;
 
-export type Routes = typeof routes;
+const routes = {
+  ...staticRoutes,
+  ...dinamicRoutes,
+} as const;
+
+export type Routes = typeof staticRoutes;
 export type RouteLink = Routes[keyof Routes];
+
+export default routes;

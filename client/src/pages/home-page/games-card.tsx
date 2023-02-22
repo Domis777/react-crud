@@ -12,7 +12,7 @@ import {
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { useNavigate } from 'react-router-dom';
-import { routesPath } from 'navigation/routes';
+import routes from 'navigation/routes';
 import Img from 'components/ui/img';
 import * as Styled from './styled';
 
@@ -74,7 +74,7 @@ const GamesCard: React.FC<GamesCardProps> = ({
             color="primary"
             size="medium"
             sx={{ border: 3 }}
-            onClick={() => navigate(routesPath.SingleGamePage.createLink(id))}
+            onClick={() => navigate(routes.SingleGamePage.createLink(id))}
           >
             <InfoOutlinedIcon fontSize="medium" />
           </IconButton>

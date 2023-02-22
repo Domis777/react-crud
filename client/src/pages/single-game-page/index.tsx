@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import { routes } from 'navigation/routes';
+import routes from 'navigation/routes';
 import { styled, Box } from '@mui/material';
 import { Pagination, Navigation } from 'swiper';
 import Img from 'components/ui/img';

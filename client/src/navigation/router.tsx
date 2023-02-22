@@ -4,7 +4,7 @@ import NavbarLayout from 'components/layouts/navbar-layout';
 import SingleGamePage from 'pages/single-game-page';
 import HomePage from 'pages/home-page/index';
 import GameFormPage from 'pages/game-form-page/index';
-import { routes, routesPath } from './routes';
+import routes from './routes';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: routesPath.SingleGamePage.path,
+        path: routes.SingleGamePage.path,
         element: <SingleGamePage />,
       },
       {

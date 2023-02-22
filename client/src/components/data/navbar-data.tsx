@@ -1,4 +1,4 @@
-import { type RouteLink, routes } from 'navigation/routes';
+import routes, { type RouteLink } from 'navigation/routes';
 import { Breakpoint } from '@mui/material';
 
 export type Link = {
