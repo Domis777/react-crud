@@ -20,7 +20,7 @@ const HomePage = () => {
   return (
     <Container sx={{ mt: 2 }}>
       <Button
-        sx={{ border: 2, fontWeight: '600' }}
+        sx={{ border: 3, fontWeight: '600' }}
         variant="outlined"
         size="large"
         onClick={() => navigate(routes.GameFormPage)}

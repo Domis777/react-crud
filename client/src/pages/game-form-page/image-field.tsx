@@ -55,6 +55,7 @@ const GameImageField = () => {
             variant="filled"
             fullWidth
             label="Image"
+            name="image"
             size="small"
             InputProps={{
               endAdornment: (

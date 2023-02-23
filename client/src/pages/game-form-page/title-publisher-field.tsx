@@ -13,12 +13,14 @@ const GameField = () => (
       variant="filled"
       fullWidth
       label="Title"
+      name="title"
       size="small"
     />
     <TextField
       variant="filled"
       fullWidth
       label="Publisher"
+      name="publisher"
       size="small"
     />
   </Box>

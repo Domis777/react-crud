@@ -6,13 +6,15 @@ const GameNumberField = () => (
     <TextField
       variant="filled"
       fullWidth
-      label="Rating 0 - 100"
+      label="Rating 1 - 100"
+      name="rating"
       size="small"
     />
     <TextField
       variant="filled"
       fullWidth
       label="Price"
+      name="price"
       size="small"
     />
   </Stack>

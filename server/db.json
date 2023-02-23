@@ -4,9 +4,15 @@
       "id": 1,
       "title": "God of War Ragnarök",
       "information": {
-        "platforms" : ["PlayStation 5", "PlayStation 4"],
-        "publisher" : "Sony Interactive Entertainment",
-        "genres": ["Action-adventure", "Hack and slash"]
+        "platforms": [
+          "PlayStation 5",
+          "PlayStation 4"
+        ],
+        "publisher": "Sony Interactive Entertainment",
+        "genres": [
+          "Action-adventure",
+          "Hack and slash"
+        ]
       },
       "price": "69.99$",
       "image": [
@@ -21,9 +27,15 @@
       "id": 2,
       "title": "Dead Space Remake",
       "information": {
-        "platforms" : ["PlayStation 5", "Xbox Series X/S", "Windows"],
-        "publisher" : "Electronic Arts",
-        "genres": ["Survival horror"]
+        "platforms": [
+          "PlayStation 5",
+          "Xbox Series X/S",
+          "Windows"
+        ],
+        "publisher": "Electronic Arts",
+        "genres": [
+          "Survival horror"
+        ]
       },
       "price": "69.99$",
       "image": [
@@ -38,9 +50,18 @@
       "id": 3,
       "title": "Castillo Protocol",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S"],
-        "publisher" : "Krafton",
-        "genres": ["Survival horror", "Action"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S"
+        ],
+        "publisher": "Krafton",
+        "genres": [
+          "Survival horror",
+          "Action"
+        ]
       },
       "price": "59.99$",
       "image": [
@@ -55,9 +76,18 @@
       "id": 4,
       "title": "Elden Ring",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S"],
-        "publisher" : "Bandai Namco Entertainment",
-        "genres": ["Action", "Role-playing"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S"
+        ],
+        "publisher": "Bandai Namco Entertainment",
+        "genres": [
+          "Action",
+          "Role-playing"
+        ]
       },
       "price": "39.99$",
       "image": [
@@ -72,9 +102,18 @@
       "id": 5,
       "title": "Red Dead Redemption 2",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S"],
-        "publisher" : "Rockstar Games",
-        "genres": ["Action", "Adventure"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S"
+        ],
+        "publisher": "Rockstar Games",
+        "genres": [
+          "Action",
+          "Adventure"
+        ]
       },
       "price": "49.99$",
       "image": [
@@ -89,9 +128,18 @@
       "id": 6,
       "title": "Grand Theft Auto V",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S"],
-        "publisher" : "Rockstar Games",
-        "genres": ["Action", "Adventure"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S"
+        ],
+        "publisher": "Rockstar Games",
+        "genres": [
+          "Action",
+          "Adventure"
+        ]
       },
       "price": "29.99$",
       "image": [
@@ -106,9 +154,15 @@
       "id": 7,
       "title": "Stray",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows"],
-        "publisher" : "Annapurna Interactive",
-        "genres": ["Adventure"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows"
+        ],
+        "publisher": "Annapurna Interactive",
+        "genres": [
+          "Adventure"
+        ]
       },
       "price": "19.99$",
       "image": [
@@ -123,9 +177,19 @@
       "id": 8,
       "title": "The Witcher 3: Wild Hunt",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
-        "publisher" : "CD Projekt",
-        "genres": ["Action", "Role-playing"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S",
+          "Nintendo Switch"
+        ],
+        "publisher": "CD Projekt",
+        "genres": [
+          "Action",
+          "Role-playing"
+        ]
       },
       "price": "39.99$",
       "image": [
@@ -140,9 +204,19 @@
       "id": 9,
       "title": "Monster Hunter Rise",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
-        "publisher" : "Capcom",
-        "genres": ["Action", "Adventure"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S",
+          "Nintendo Switch"
+        ],
+        "publisher": "Capcom",
+        "genres": [
+          "Action",
+          "Adventure"
+        ]
       },
       "price": "39.99$",
       "image": [
@@ -157,9 +231,19 @@
       "id": 10,
       "title": "Hogwarts Legacy",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
-        "publisher" : "Warner Bros. Games",
-        "genres": ["Action", "Role-playing"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S",
+          "Nintendo Switch"
+        ],
+        "publisher": "Warner Bros. Games",
+        "genres": [
+          "Action",
+          "Role-playing"
+        ]
       },
       "price": "69.99$",
       "image": [
@@ -174,9 +258,20 @@
       "id": 11,
       "title": "It Takes Two",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
-        "publisher" : "Electronic Arts",
-        "genres": ["Action", "Adventure", "Platform"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S",
+          "Nintendo Switch"
+        ],
+        "publisher": "Electronic Arts",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Platform"
+        ]
       },
       "price": "19.99$",
       "image": [
@@ -191,9 +286,15 @@
       "id": 12,
       "title": "Horizon Forbidden West",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5"],
-        "publisher" : "Sony Interactive Entertainment",
-        "genres": ["Action", "Role-playing"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5"
+        ],
+        "publisher": "Sony Interactive Entertainment",
+        "genres": [
+          "Action",
+          "Role-playing"
+        ]
       },
       "price": "69.99$",
       "image": [
@@ -203,6 +304,169 @@
         "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/31377b14b840107c6600ab35a1aed332.jpg"
       ],
       "metacritic": 88
+    },
+    {
+      "id": 13,
+      "title": "Dragon Ball Xenoverse 2",
+      "information": {
+        "platforms": [
+          "Windows",
+          "PlayStation 4",
+          "PlayStation 5",
+          "Xbox Series X/S",
+          "Xbox One",
+          "Nintendo Switch"
+        ],
+        "publisher": "Bandai Namco Entertainment",
+        "genres": [
+          "Action-adventure",
+          "Role-playing"
+        ]
+      },
+      "price": "49.99$",
+      "image": [
+        "https://switchplayer.net/wp-content/uploads/2017/07/dragon-ball-xenoverse-2-title.jpg",
+        "https://cdn.cloudflare.steamstatic.com/steam/apps/454650/ss_647b4fe05539c041b90a5273ff3185a159947081.1920x1080.jpg?t=1668788616",
+        "https://www.comingsoon.net/wp-content/uploads/sites/3/2022/07/dbz.jpg?w=800",
+        "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/09/Featured---How-to-get-Goku-Ultra-Instinct-in-Dragon-Ball-Xenoverse-2.jpg"
+      ],
+      "metacritic": 72
+    },
+    {
+      "id": 14,
+      "title": "dfgdfg",
+      "information": {
+        "platforms": [
+          "PlayStation 4"
+        ],
+        "publisher": "dfgdfg",
+        "genres": [
+          "Action"
+        ]
+      },
+      "price": "gfhfgh$",
+      "image": [
+        "fghfgh"
+      ],
+      "metacritic": null
+    },
+    {
+      "id": 15,
+      "title": "fhgfh",
+      "information": {
+        "platforms": [
+          "Xbox Series X/S"
+        ],
+        "publisher": "fghfgh",
+        "genres": [
+          "Adventure"
+        ]
+      },
+      "price": "fghjfh$",
+      "image": [
+        "fghfgh"
+      ],
+      "metacritic": null
+    },
+    {
+      "id": 16,
+      "title": "bvnvbn",
+      "information": {
+        "platforms": [
+          "PlayStation 4"
+        ],
+        "publisher": "bvnvbn",
+        "genres": [
+          "Adventure"
+        ]
+      },
+      "price": "456$",
+      "image": [],
+      "metacritic": 546
+    },
+    {
+      "id": 17,
+      "title": "bcvbx",
+      "information": {
+        "platforms": [
+          "PlayStation 5"
+        ],
+        "publisher": "xvcbxcvb",
+        "genres": [
+          "Action-adventure"
+        ]
+      },
+      "price": "cvxb$",
+      "image": [
+        "xcvb"
+      ],
+      "metacritic": null
+    },
+    {
+      "id": 18,
+      "title": "czxvzxc",
+      "information": {
+        "platforms": [
+          "PlayStation 5"
+        ],
+        "publisher": "czxvc",
+        "genres": [
+          "Adventure"
+        ]
+      },
+      "price": "zxvc$",
+      "image": [
+        "zcxv"
+      ],
+      "metacritic": 0
+    },
+    {
+      "id": 19,
+      "title": "sfdg",
+      "information": {
+        "platforms": [
+          "PlayStation 5"
+        ],
+        "publisher": "sdfg",
+        "genres": [
+          "Adventure"
+        ]
+      },
+      "price": "sdfgs$",
+      "image": [],
+      "metacritic": 0
+    },
+    {
+      "id": 20,
+      "title": "sfdg",
+      "information": {
+        "platforms": [
+          "Xbox Series X/S"
+        ],
+        "publisher": "sfdg",
+        "genres": [
+          "Adventure"
+        ]
+      },
+      "price": "sfdg$",
+      "image": [],
+      "metacritic": null
+    },
+    {
+      "id": 21,
+      "title": "zxcv",
+      "information": {
+        "platforms": [
+          "PlayStation 4"
+        ],
+        "publisher": "czxv",
+        "genres": [
+          "Action-adventure"
+        ]
+      },
+      "price": "czxv$",
+      "image": [],
+      "metacritic": null
     }
   ]
 }

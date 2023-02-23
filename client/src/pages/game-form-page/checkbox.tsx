@@ -7,7 +7,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import { platform, genres } from './form-data';
+import { platform, genres } from '../data/form-data';
 
 const GameCheckbox = () => (
   <Stack direction="row" justifyContent="space-between" gap={2} width={1}>
@@ -25,6 +25,8 @@ const GameCheckbox = () => (
             key={item}
             control={<Checkbox />}
             label={item}
+            value={item}
+            name="genres"
           />
         ))}
       </FormGroup>
@@ -43,6 +45,8 @@ const GameCheckbox = () => (
             key={item}
             control={<Checkbox />}
             label={item}
+            value={item}
+            name="platforms"
           />
         ))}
       </FormGroup>

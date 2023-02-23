@@ -9,6 +9,8 @@ const api = axios.create({
   },
 });
 
+type GetNewGames = Omit<GamesModel, 'id'>;
+
 const fetchGames = async () => {
   const response = await api.get<GamesModel[]>('/videoGames');
 
@@ -20,9 +22,16 @@ const fetchGame = async (id: string | number) => {
   return response.data;
 };
 
+const createGame = async (createNewGames: GetNewGames) => {
+  const response = await api.post<GamesModel>('/videoGames', createNewGames);
+
+  return response.data;
+};
+
 const ApiService = {
   fetchGames,
   fetchGame,
+  createGame,
 };
 
 export default ApiService;
