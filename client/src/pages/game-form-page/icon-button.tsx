@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, IconButton } from '@mui/material';
+import { Stack, IconButton, Typography } from '@mui/material';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 
@@ -19,19 +19,51 @@ const GameIconButton: React.FC<GameIconButtonProps> = ({
   >
     <IconButton
       type="submit"
-      sx={{ border: 3, p: 1 }}
+      sx={{
+        border: 3,
+        borderRadius: '5px',
+        p: '5px',
+        mr:
+          0.5,
+      }}
       color="success"
       size="large"
     >
-      <CheckCircleOutlineOutlinedIcon fontSize="large" />
+      <Typography
+        component="legend"
+        color="success.main"
+        fontWeight="600"
+        sx={{
+          display: 'flex', alignItems: 'center',
+        }}
+      >
+        Submit
+      </Typography>
+      <CheckCircleOutlineOutlinedIcon fontSize="medium" />
     </IconButton>
     <IconButton
-      size="large"
-      sx={{ border: 3, p: 1 }}
+      sx={{
+        border: 3,
+        borderRadius: '5px',
+        p: '5px',
+        mr: 0.5,
+      }}
       color="error"
       onClick={onClick}
     >
-      <CancelOutlinedIcon fontSize="large" />
+      <CancelOutlinedIcon fontSize="medium" />
+      <Typography
+        component="legend"
+        color="error.main"
+        fontWeight="600"
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+
+        }}
+      >
+        Cancel
+      </Typography>
     </IconButton>
   </Stack>
 );

@@ -32,7 +32,10 @@ const GameImageField = () => {
       <Stack direction="row" alignContent="center" justifyContent="center" sx={{ pb: 1 }}>
         <IconButton
           sx={{
-            border: 3, borderRadius: '5px', p: '5px', mr: 0.5,
+            border: 3,
+            borderRadius: '5px',
+            p: '5px',
+            mr: 0.5,
           }}
           color="primary"
           onClick={() => addImgField()}
