@@ -26,8 +26,8 @@ const GameFormPage = () => {
 
     try {
       const values = getGamesFromData(formRef.current);
-      // await ApiService.createGame(values);
-      // navigate(routes.HomePage);
+      await ApiService.createGame(values);
+      navigate(routes.HomePage);
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);
