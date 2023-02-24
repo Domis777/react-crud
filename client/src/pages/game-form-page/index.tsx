@@ -37,6 +37,13 @@ const GameFormPage = () => {
     }
   };
 
+  React.useEffect(() => {
+    (async () => {
+      const fetchedGames = await ApiService.fetchGames(id);
+      setGames(fetchedGames);
+    })();
+  }, []);
+
   return (
     <Styled.StyledAddLayout>
       <Styled.StyledPaper>
