@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { styled, Card } from '@mui/material';
+import { styled, Card, Stack } from '@mui/material';
 
 export const GamesGrid = styled('div')(({ theme }) => ({
   display: 'grid',
@@ -28,3 +28,11 @@ export const VideoGameCard = styled(Card)(({ theme }) => ({
   boxShadow: `5px 5px 10px 0 ${theme.palette.common.black}`,
   border: `4px solid ${theme.palette.primary.main}`,
 }));
+
+export const ActionButton = styled(Stack)({
+  flexDirection: 'row',
+  position: 'absolute',
+  right: 0,
+  margin: 5,
+  gap: 5,
+});

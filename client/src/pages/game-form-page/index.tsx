@@ -17,7 +17,7 @@ import GameIconButton from './icon-button';
 import getGamesFromData from './helper';
 
 const GameFormPage = () => {
-  // const { id } = useParams();
+  const { id } = useParams();
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
   const navigate = useNavigate();
 

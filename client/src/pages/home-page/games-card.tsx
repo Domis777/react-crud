@@ -11,9 +11,12 @@ import {
 } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import ModeEditOutlinedIcon from '@mui/icons-material/ModeEditOutlined';
 import { useNavigate } from 'react-router-dom';
 import routes from 'navigation/routes';
 import Img from 'components/ui/img';
+import ApiService from 'services/api-services';
 import * as Styled from './styled';
 
 type GamesCardProps = GamesModel;
@@ -26,12 +29,52 @@ const GamesCard: React.FC<GamesCardProps> = ({
   price,
   metacritic,
 }) => {
-  const raitings = metacritic / 20;
   const navigate = useNavigate();
+
+  const deleteGames = async (gameId: string | number) => {
+    await ApiService.deleteGame(gameId);
+    window.location.reload();
+  };
+
+  const raitings = metacritic / 20;
 
   return (
     <Styled.VideoGameCard>
-      <Box>
+      <Box position="relative">
+        <Styled.ActionButton>
+          <IconButton
+            sx={{
+              border: 3,
+              borderColor: 'common.white',
+              p: '5px',
+              bgcolor: 'warning.main',
+              '&:hover': {
+                bgcolor: 'warning.light',
+              },
+            }}
+            size="medium"
+            color="error"
+            onClick={() => navigate(routes.UpdateGamePage.createLink(id))}
+          >
+            <ModeEditOutlinedIcon sx={{ color: 'common.white', fontSize: '25px' }} />
+          </IconButton>
+          <IconButton
+            sx={{
+              border: 3,
+              borderColor: 'common.white',
+              p: '5px',
+              bgcolor: 'error.main',
+              '&:hover': {
+                bgcolor: 'error.light',
+              },
+            }}
+            size="medium"
+            color="error"
+            onClick={() => deleteGames(id)}
+          >
+            <DeleteOutlineIcon sx={{ color: 'common.white', fontSize: '25px' }} />
+          </IconButton>
+        </Styled.ActionButton>
         <CardMedia>
           <Img
             src={image[0]}

@@ -23,6 +23,10 @@ const router = createBrowserRouter([
         path: routes.GameFormPage,
         element: <GameFormPage />,
       },
+      {
+        path: routes.UpdateGamePage.path,
+        element: <GameFormPage />,
+      },
     ],
   },
 ]);

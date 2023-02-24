@@ -16,6 +16,7 @@ const fetchGames = async () => {
 
   return response.data;
 };
+
 const fetchGame = async (id: string | number) => {
   const response = await api.get<GamesModel>(`/videoGames/${id}`);
 
@@ -28,10 +29,17 @@ const createGame = async (createNewGames: GetNewGames) => {
   return response.data;
 };
 
+const deleteGame = async (id: string | number) => {
+  const response = await api.delete<GamesModel>(`/videoGames/${id}`);
+
+  return response.data;
+};
+
 const ApiService = {
   fetchGames,
   fetchGame,
   createGame,
+  deleteGame,
 };
 
 export default ApiService;
