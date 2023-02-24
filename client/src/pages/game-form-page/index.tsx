@@ -6,7 +6,7 @@ import {
 } from '@mui/material';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import ApiService from 'services/api-services';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import routes from 'navigation/routes';
 import GameField from './title-publisher-field';
 import GameNumberField from './rating-price-field';
@@ -15,11 +15,13 @@ import GameCheckbox from './checkbox';
 import * as Styled from './styled';
 import GameIconButton from './icon-button';
 import getGamesFromData from './helper';
+import useGame from '../../components/hooks/use-game';
 
 const GameFormPage = () => {
   const { id } = useParams();
-  const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
   const navigate = useNavigate();
+  const [game, loadingGameData] = useGame(id);
+  const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -37,12 +39,8 @@ const GameFormPage = () => {
     }
   };
 
-  React.useEffect(() => {
-    (async () => {
-      const fetchedGames = await ApiService.fetchGames(id);
-      setGames(fetchedGames);
-    })();
-  }, []);
+  if (loadingGameData) return null;
+  
 
   return (
     <Styled.StyledAddLayout>

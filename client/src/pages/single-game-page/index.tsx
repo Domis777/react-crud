@@ -4,16 +4,16 @@ import routes from 'navigation/routes';
 import { Box } from '@mui/material';
 import { Pagination, Navigation } from 'swiper';
 import Img from 'components/ui/img';
-import ApiService from 'services/api-services';
 import { SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import * as Styled from './styled';
+import useGame from '../../components/hooks/use-game';
 
 const SingleGamePage = () => {
   const { id } = useParams();
-  const [game, setGame] = React.useState<undefined | GamesModel>(undefined);
+  const [game] = useGame(id);
 
   const pagination = {
     clickable: true,
@@ -21,15 +21,6 @@ const SingleGamePage = () => {
       return `<span class="${className}">${index + 1}</span>`;
     },
   };
-
-  React.useEffect(() => {
-    if (id !== undefined) {
-      (async () => {
-        const fetchedVideoGame = await ApiService.fetchGame(id);
-        setGame(fetchedVideoGame);
-      })();
-    }
-  }, []);
 
   if (id === undefined) return <Navigate to={routes.HomePage} />;
   if (game === undefined) return null;
