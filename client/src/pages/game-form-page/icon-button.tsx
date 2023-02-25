@@ -2,6 +2,7 @@ import React from 'react';
 import { Stack, IconButton, Typography } from '@mui/material';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
+import { useParams } from 'react-router-dom';
 
 type GameIconButtonProps = {
   onClick: VoidFunction
@@ -9,63 +10,67 @@ type GameIconButtonProps = {
 
 const GameIconButton: React.FC<GameIconButtonProps> = ({
   onClick,
-}) => (
-  <Stack
-    sx={{ mt: 3 }}
-    direction="row"
-    justifyContent="space-evenly"
-    gap={2}
-    width={1}
-  >
-    <IconButton
-      type="submit"
-      sx={{
-        border: 3,
-        borderRadius: '5px',
-        p: '5px',
-        mr:
-          0.5,
-      }}
-      color="success"
-      size="large"
-    >
-      <Typography
-        component="legend"
-        color="success.main"
-        fontWeight="600"
-        sx={{
-          display: 'flex', alignItems: 'center',
-        }}
-      >
-        Submit
-      </Typography>
-      <CheckCircleOutlineOutlinedIcon fontSize="medium" />
-    </IconButton>
-    <IconButton
-      sx={{
-        border: 3,
-        borderRadius: '5px',
-        p: '5px',
-        mr: 0.5,
-      }}
-      color="error"
-      onClick={onClick}
-    >
-      <CancelOutlinedIcon fontSize="medium" />
-      <Typography
-        component="legend"
-        color="error.main"
-        fontWeight="600"
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
+}) => {
+  const { id } = useParams();
 
+  return (
+    <Stack
+      sx={{ mt: 3 }}
+      direction="row"
+      justifyContent="space-evenly"
+      gap={2}
+      width={1}
+    >
+      <IconButton
+        type="submit"
+        sx={{
+          border: 3,
+          borderRadius: '5px',
+          p: '5px',
+          mr:
+          0.5,
         }}
+        color={id !== undefined ? 'warning' : 'success'}
+        size="large"
       >
-        Cancel
-      </Typography>
-    </IconButton>
-  </Stack>
-);
+        <Typography
+          component="legend"
+          color={id !== undefined ? 'warning.main' : 'success.main'}
+          fontWeight="600"
+          sx={{
+            display: 'flex', alignItems: 'center',
+          }}
+        >
+          {id !== undefined ? 'Update' : 'Submit'}
+        </Typography>
+        <CheckCircleOutlineOutlinedIcon fontSize="medium" />
+      </IconButton>
+      <IconButton
+        sx={{
+          border: 3,
+          borderRadius: '5px',
+          p: '5px',
+          mr: 0.5,
+        }}
+        color="error"
+        onClick={onClick}
+      >
+        <CancelOutlinedIcon fontSize="medium" />
+        <Typography
+          component="legend"
+          color="error.main"
+          fontWeight="600"
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+
+          }}
+        >
+          Cancel
+        </Typography>
+      </IconButton>
+    </Stack>
+  );
+};
 
 export default GameIconButton;

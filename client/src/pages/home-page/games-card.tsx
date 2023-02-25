@@ -16,10 +16,11 @@ import ModeEditOutlinedIcon from '@mui/icons-material/ModeEditOutlined';
 import { useNavigate } from 'react-router-dom';
 import routes from 'navigation/routes';
 import Img from 'components/ui/img';
-import ApiService from 'services/api-services';
 import * as Styled from './styled';
 
-type GamesCardProps = GamesModel;
+type GamesCardProps = GamesModel & {
+  onDelete: VoidFunction
+};
 
 const GamesCard: React.FC<GamesCardProps> = ({
   id,
@@ -28,13 +29,9 @@ const GamesCard: React.FC<GamesCardProps> = ({
   image,
   price,
   metacritic,
+  onDelete,
 }) => {
   const navigate = useNavigate();
-
-  const deleteGames = async (gameId: string | number) => {
-    await ApiService.deleteGame(gameId);
-    window.location.reload();
-  };
 
   const raitings = metacritic / 20;
 
@@ -70,7 +67,7 @@ const GamesCard: React.FC<GamesCardProps> = ({
             }}
             size="medium"
             color="error"
-            onClick={() => deleteGames(id)}
+            onClick={onDelete}
           >
             <DeleteOutlineIcon sx={{ color: 'common.white', fontSize: '25px' }} />
           </IconButton>

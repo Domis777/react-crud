@@ -9,16 +9,18 @@ import {
 import createId from 'uniqid';
 import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { useParams } from 'react-router-dom';
 
 const uniqId = [createId()];
 
 const GameImageField = () => {
+  const { id } = useParams();
   const [imgFieldIds, setImgFieldIds] = React.useState<string[]>(uniqId);
 
   const addImgField = () => setImgFieldIds([...imgFieldIds, createId()]);
-  const deleteImgField = (id: string) => {
+  const deleteImgField = (ids: string) => {
     if (imgFieldIds.length > 1) {
-      setImgFieldIds([...imgFieldIds.filter((imgId) => imgId !== id)]);
+      setImgFieldIds([...imgFieldIds.filter((imgId) => imgId !== ids)]);
     }
   };
 
@@ -34,16 +36,17 @@ const GameImageField = () => {
           sx={{
             border: 3,
             borderRadius: '5px',
+            borderColor: `${id !== undefined ? 'warning.main' : 'primary.main'}`,
             p: '5px',
             mr: 0.5,
           }}
           color="primary"
           onClick={() => addImgField()}
         >
-          <AddPhotoAlternateOutlinedIcon color="primary" />
+          <AddPhotoAlternateOutlinedIcon color={id !== undefined ? 'warning' : 'primary'} />
           <Typography
             component="legend"
-            color="primary.main"
+            color={id !== undefined ? 'warning.main' : 'primary.main'}
             fontWeight="600"
             sx={{ display: 'flex', alignItems: 'center' }}
           >
@@ -52,9 +55,9 @@ const GameImageField = () => {
         </IconButton>
       </Stack>
       <Stack sx={{ gap: 2, width: 1 }}>
-        {imgFieldIds.map((id) => (
+        {imgFieldIds.map((ids) => (
           <TextField
-            key={id}
+            key={ids}
             variant="filled"
             fullWidth
             label="Image"
@@ -66,7 +69,7 @@ const GameImageField = () => {
                   <IconButton
                     sx={{ border: 2, p: '5px' }}
                     color="error"
-                    onClick={() => deleteImgField(id)}
+                    onClick={() => deleteImgField(ids)}
                   >
                     <DeleteOutlineIcon color="error" />
                   </IconButton>

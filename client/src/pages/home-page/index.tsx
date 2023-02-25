@@ -10,6 +10,12 @@ const HomePage = () => {
   const [games, setGames] = React.useState<GamesModel[]>([]);
   const navigate = useNavigate();
 
+  const deleteGame = async (id: string | number) => {
+    await ApiService.deleteGame(id);
+    const fetchedGames = await ApiService.fetchGames();
+    setGames(fetchedGames);
+  };
+
   React.useEffect(() => {
     (async () => {
       const fetchedGames = await ApiService.fetchGames();
@@ -28,7 +34,13 @@ const HomePage = () => {
         Add
       </Button>
       <Styled.GamesGrid>
-        { games.map((game) => (<GamesCard key={game.id} {...game} />)) }
+        { games.map((game) => (
+          <GamesCard
+            key={game.id}
+            {...game}
+            onDelete={() => deleteGame(game.id)}
+          />
+        )) }
       </Styled.GamesGrid>
     </Container>
   );

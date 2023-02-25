@@ -40,7 +40,6 @@ const GameFormPage = () => {
   };
 
   if (loadingGameData) return null;
-  
 
   return (
     <Styled.StyledAddLayout>
@@ -51,8 +50,8 @@ const GameFormPage = () => {
           onSubmit={handleSubmit}
           ref={formRef}
         >
-          <SportsEsportsIcon sx={{ fontSize: 50 }} color="primary" />
-          <Typography variant="h5" color="primary">Add new Video Game</Typography>
+          <SportsEsportsIcon sx={{ fontSize: 50 }} color={id !== undefined ? 'warning' : 'primary'} />
+          <Typography variant="h5" color="primary">{id !== undefined ? 'Update Video Game' : 'Add new Video Game'}</Typography>
           <GameField />
           <GameCheckbox />
           <GameNumberField />
