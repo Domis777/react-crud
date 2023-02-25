@@ -3,12 +3,11 @@ import {
   Checkbox,
   FormControlLabel,
   FormGroup,
-  Paper,
-  Stack,
   Typography,
   CheckboxProps,
 } from '@mui/material';
-import { platform, genres } from '../data/form-data';
+import { platform, genres } from '../form-data';
+import * as Styled from './styled/checkbox-styled';
 
 type GameCheckboxProps = {
   CheckboxColor: CheckboxProps['color']
@@ -29,12 +28,9 @@ const GameCheckbox: React.FC<GameCheckboxProps> = ({
   );
 
   return (
-    <Stack direction="row" justifyContent="space-between" gap={2} width={1}>
-      <Paper sx={{
-        border: 1,
+    <Styled.StyledCheckboxContainer>
+      <Styled.StyledCheckBoxPaper sx={{
         borderColor: paperColor,
-        p: 2,
-        width: 1,
       }}
       >
         <FormGroup>
@@ -47,19 +43,16 @@ const GameCheckbox: React.FC<GameCheckboxProps> = ({
                   color={CheckboxColor}
                   defaultChecked={isCheck(isCheckGenres, item)}
                 />
-)}
+              )}
               label={item}
               value={item}
               name="genres"
             />
           ))}
         </FormGroup>
-      </Paper>
-      <Paper sx={{
-        border: 1,
+      </Styled.StyledCheckBoxPaper>
+      <Styled.StyledCheckBoxPaper sx={{
         borderColor: paperColor,
-        p: 2,
-        width: 1,
       }}
       >
         <FormGroup>
@@ -72,15 +65,15 @@ const GameCheckbox: React.FC<GameCheckboxProps> = ({
                   color={CheckboxColor}
                   defaultChecked={isCheck(isCheckPlatforms, item)}
                 />
-)}
+              )}
               label={item}
               value={item}
               name="platforms"
             />
           ))}
         </FormGroup>
-      </Paper>
-    </Stack>
+      </Styled.StyledCheckBoxPaper>
+    </Styled.StyledCheckboxContainer>
   );
 };
 

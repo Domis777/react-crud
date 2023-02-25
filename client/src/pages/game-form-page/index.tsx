@@ -12,11 +12,11 @@ import GameField from './title-publisher-field';
 import GameNumberField from './rating-price-field';
 import GameImageField from './image-field';
 import GameCheckbox from './checkbox';
-import * as Styled from './styled';
+import * as Styled from './styled/styled';
 import GameIconButton from './icon-button';
 import getGamesFromData from './helper';
-import useGame from '../../components/hooks/use-game';
-import getModeData from './data';
+import useGame from '../../hooks/use-game';
+import getModeData from './data/data';
 
 const GameFormPage = () => {
   const { id } = useParams();

@@ -8,7 +8,7 @@ import {
 import { useLocation } from 'react-router-dom';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
-import { LinksGroup } from '../../../data/navbar-data';
+import { LinksGroup } from '../../data/navbar-data';
 import { navbarDesktopItemStyles } from './styles';
 import NavbarDesktopDropdownLink from './navbar-desktop-dropdown-link';
 

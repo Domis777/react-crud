@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, ClickAwayListener, Theme } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { extendBr, mainLinks, linksGroups } from '../../../data/navbar-data';
+import { extendBr, mainLinks, linksGroups } from '../../data/navbar-data';
 import NavbarDesktopDropdown from './navbar-desktop-dropdown';
 import NavbarDesktopLinks from './navbar-desktop-link';
 

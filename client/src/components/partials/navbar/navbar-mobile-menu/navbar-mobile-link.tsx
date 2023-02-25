@@ -10,10 +10,6 @@ const Link = styled(NavLink)<{ indent: number }>(({ theme, indent }) => ({
   textDecoration: 'none',
   color: theme.palette.common.black,
   padding: theme.spacing(1, 2, 1, indent),
-  '&.active': {
-    color: theme.palette.primary.main,
-    boxShadow: `inset 8px 0 0 ${theme.palette.primary.main}`,
-  },
 }));
 
 type NavbarMobileLinkProps = {

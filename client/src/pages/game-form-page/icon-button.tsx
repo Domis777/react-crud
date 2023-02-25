@@ -1,11 +1,7 @@
 import React from 'react';
-import {
-  Stack,
-  IconButton,
-  Typography,
-} from '@mui/material';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
+import * as Styled from './styled/icon-button-styled';
 
 type GameIconButtonProps = {
   btnText: string
@@ -16,61 +12,29 @@ const GameIconButton: React.FC<GameIconButtonProps> = ({
   btnText,
   onClick,
 }) => (
-  <Stack
-    sx={{ mt: 3 }}
-    direction="row"
-    justifyContent="space-evenly"
-    gap={2}
-    width={1}
-  >
-    <IconButton
-      type="submit"
-      sx={{
-        border: 3,
-        borderRadius: '5px',
-        p: '5px',
-        mr: 0.5,
-      }}
+  <Styled.StyledIconButtonContainer>
+    <Styled.StyledIconButton
       color="success"
-      size="large"
     >
-      <Typography
-        component="legend"
+      <Styled.StyledTypography
         color="success"
-        fontWeight="600"
-        sx={{
-          display: 'flex', alignItems: 'center',
-        }}
       >
         {btnText}
-      </Typography>
+      </Styled.StyledTypography>
       <CheckCircleOutlineOutlinedIcon fontSize="medium" />
-    </IconButton>
-    <IconButton
-      sx={{
-        border: 3,
-        borderRadius: '5px',
-        p: '5px',
-        mr: 0.5,
-      }}
+    </Styled.StyledIconButton>
+    <Styled.StyledIconButton
       color="error"
       onClick={onClick}
     >
       <CancelOutlinedIcon fontSize="medium" />
-      <Typography
-        component="legend"
+      <Styled.StyledTypography
         color="error.main"
-        fontWeight="600"
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-
-        }}
       >
         Cancel
-      </Typography>
-    </IconButton>
-  </Stack>
+      </Styled.StyledTypography>
+    </Styled.StyledIconButton>
+  </Styled.StyledIconButtonContainer>
 );
 
 export default GameIconButton;

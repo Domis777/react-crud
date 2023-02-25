@@ -91,10 +91,56 @@ const GamesCard: React.FC<GamesCardProps> = ({
           gap: 2,
         }}
         >
-          <Typography gutterBottom variant="h5" component="div" textAlign="center">{title}</Typography>
-          <Typography variant="body2" color="text.secondary">{information.genres.join(', ')}</Typography>
-          <Typography variant="body2" color="text.secondary">{information.platforms.join(', ')}</Typography>
-          <Typography variant="body2" color="text.secondary">{information.publisher}</Typography>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            textAlign="center"
+          >
+            {title}
+          </Typography>
+          <Stack>
+            <Typography
+              variant="body2"
+              color="primary.main"
+            >
+              Genres:
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+            >
+              {information.genres.join(', ')}
+            </Typography>
+          </Stack>
+          <Stack>
+            <Typography
+              variant="body2"
+              color="primary.main"
+            >
+              Platforms:
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+            >
+              {information.platforms.join(', ')}
+            </Typography>
+          </Stack>
+          <Stack>
+            <Typography
+              variant="body2"
+              color="primary.main"
+            >
+              Publisher:
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+            >
+              {information.publisher}
+            </Typography>
+          </Stack>
         </CardContent>
       </Box>
       <Box>
@@ -113,12 +159,16 @@ const GamesCard: React.FC<GamesCardProps> = ({
           <IconButton
             color="primary"
             size="medium"
-            sx={{ border: 3 }}
+            sx={{ border: 3, p: 0.5 }}
             onClick={() => navigate(routes.SingleGamePage.createLink(id))}
           >
-            <InfoOutlinedIcon fontSize="medium" />
+            <InfoOutlinedIcon fontSize="large" />
           </IconButton>
-          <IconButton color="primary" size="medium" sx={{ border: 3 }}>
+          <IconButton
+            color="primary"
+            size="medium"
+            sx={{ border: 3 }}
+          >
             <AddShoppingCartIcon fontSize="medium" />
           </IconButton>
         </CardActions>

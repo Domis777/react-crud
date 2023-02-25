@@ -2,9 +2,7 @@ import React from 'react';
 import {
   InputAdornment,
   TextField,
-  IconButton,
   Stack,
-  Typography,
   TypographyProps,
   IconProps,
   TextFieldProps,
@@ -13,6 +11,7 @@ import {
 import createId from 'uniqid';
 import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import * as Styled from './styled/img-field-styled';
 
 const uniqId = [createId()];
 
@@ -50,34 +49,20 @@ const GameImageField: React.FC<GameImageFieldProps> = ({
   };
 
   return (
-    <Stack sx={{
-      width: 1,
-      gap: 1,
-      alignItems: 'self-start',
-    }}
-    >
-      <Stack direction="row" alignContent="center" justifyContent="center" sx={{ pb: 1 }}>
-        <IconButton
-          sx={{
-            border: 3,
-            borderRadius: '5px',
-            p: '5px',
-            mr: 0.5,
-          }}
+    <Styled.StyledImgFieldContainer>
+      <Styled.StyledImgFieldButton>
+        <Styled.StyledIconButton
           color={btnColor}
           onClick={() => addImgField()}
         >
           <AddPhotoAlternateOutlinedIcon color={iconColor} />
-          <Typography
-            component="legend"
+          <Styled.StyledTypography
             color={TypoColor}
-            fontWeight="600"
-            sx={{ display: 'flex', alignItems: 'center' }}
           >
             Add Images
-          </Typography>
-        </IconButton>
-      </Stack>
+          </Styled.StyledTypography>
+        </Styled.StyledIconButton>
+      </Styled.StyledImgFieldButton>
       <Stack sx={{ gap: 2, width: 1 }}>
         {imgFieldIds.map((id) => (
           <TextField
@@ -92,20 +77,20 @@ const GameImageField: React.FC<GameImageFieldProps> = ({
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end" sx={{ gap: 0.5 }}>
-                  <IconButton
-                    sx={{ border: 2, p: '5px' }}
+                  <Styled.StyledIconButton
+                    sx={{ borderRadius: '50%' }}
                     color="error"
                     onClick={() => deleteImgField(id)}
                   >
                     <DeleteOutlineIcon color="error" />
-                  </IconButton>
+                  </Styled.StyledIconButton>
                 </InputAdornment>
               ),
             }}
           />
         ))}
       </Stack>
-    </Stack>
+    </Styled.StyledImgFieldContainer>
   );
 };
 

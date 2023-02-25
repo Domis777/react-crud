@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, TextField, TextFieldProps } from '@mui/material';
+import { TextField, TextFieldProps } from '@mui/material';
+import StyledTitlePublisherContainer from './styled/title-publisher-styled';
 
 type GameFieldProps = {
   color: TextFieldProps['color']
@@ -12,13 +13,7 @@ const GameField: React.FC<GameFieldProps> = ({
   titleValue,
   PublisherValue,
 }) => (
-  <Box sx={{
-    display: 'flex',
-    flexDirection: 'column',
-    width: 1,
-    gap: 2,
-  }}
-  >
+  <StyledTitlePublisherContainer>
     <TextField
       variant="filled"
       fullWidth
@@ -37,7 +32,7 @@ const GameField: React.FC<GameFieldProps> = ({
       defaultValue={PublisherValue}
       color={color}
     />
-  </Box>
+  </StyledTitlePublisherContainer>
 );
 
 export default GameField;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { TextField, Stack, TextFieldProps } from '@mui/material';
+import { TextField, TextFieldProps } from '@mui/material';
+import StyledRatingPriceContainer from './styled/rating-price-styled';
 
 type GameNumberFieldProps = {
   color: TextFieldProps['color']
@@ -12,26 +13,26 @@ const GameNumberField: React.FC<GameNumberFieldProps> = ({
   ratingValue,
   priceValue,
 }) => (
-  <Stack direction="row" justifyContent="space-between" gap={2} width={1}>
+  <StyledRatingPriceContainer>
     <TextField
-      variant="filled"
       fullWidth
+      variant="filled"
+      size="small"
       label="Rating 1 - 100"
       name="rating"
-      size="small"
       defaultValue={ratingValue}
       color={color}
     />
     <TextField
-      variant="filled"
       fullWidth
+      variant="filled"
+      size="small"
       label="Price"
       name="price"
-      size="small"
       defaultValue={priceValue}
       color={color}
     />
-  </Stack>
+  </StyledRatingPriceContainer>
 );
 
 export default GameNumberField;

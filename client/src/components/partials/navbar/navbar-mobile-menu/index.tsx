@@ -6,7 +6,7 @@ import {
   type AccordionProps,
 } from '@mui/material';
 import { useLocation } from 'react-router-dom';
-import { extendBr, linksGroups, mainLinks } from '../../../data/navbar-data';
+import { extendBr, linksGroups, mainLinks } from '../../data/navbar-data';
 import NavbarMobileLink from './navbar-mobile-link';
 import NavbarMobileMenuAccordion from './navbar-mobile-menu-accordion';
 import { getActiveLinksGroupTitle } from '../helper';

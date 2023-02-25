@@ -1,19 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { MenuItem, styled } from '@mui/material';
-
-const Link = styled(NavLink)(({ theme }) => ({
-  flexGrow: 1,
-  textDecoration: 'none',
-  color: theme.palette.common.black,
-  padding: theme.spacing(0.5, 2),
-  '&.active': {
-    boxShadow: `
-      inset 4px 0 0 ${theme.palette.primary.main}`,
-    color: theme.palette.primary.main,
-    fontWeight: 500,
-  },
-}));
+import { MenuItem } from '@mui/material';
+import { Link } from './styles';
 
 type NavbarDesktopDropdownLinkProps = {
   to: string,

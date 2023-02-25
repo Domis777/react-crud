@@ -1,5 +1,5 @@
-/* eslint-disable import/prefer-default-export */
-import { Theme } from '@mui/material';
+import { Theme, styled } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 
 export const navbarDesktopItemStyles = (theme: Theme) => ({
   flexGrow: 1,
@@ -17,3 +17,16 @@ export const navbarDesktopItemStyles = (theme: Theme) => ({
     boxShadow: `inset 0 -4px 0 ${theme.palette.common.white}`,
   },
 });
+
+export const Link = styled(NavLink)(({ theme }) => ({
+  flexGrow: 1,
+  textDecoration: 'none',
+  color: theme.palette.common.black,
+  padding: theme.spacing(0.5, 2),
+  '&.active': {
+    boxShadow: `
+      inset 4px 0 0 ${theme.palette.primary.main}`,
+    color: theme.palette.primary.main,
+    fontWeight: 500,
+  },
+}));

@@ -1,8 +1,8 @@
 import React from 'react';
 import { AppBar, Toolbar, Container } from '@mui/material';
-import { extendBr } from '../../data/navbar-data';
+import { extendBr } from '../data/navbar-data';
 import NavbarDesktopMenu from './navbar-desktop-menu';
-import NavbarMobileMenu from './navbar-mobile-menu/navbar-mobile-menu';
+import NavbarMobileMenu from './navbar-mobile-menu';
 import NavbarToggler from './navbar-toggler';
 
 const Navbar = () => {

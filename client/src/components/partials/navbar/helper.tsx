@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { linksGroups } from 'components/data/navbar-data';
+import { linksGroups } from 'components/partials/data/navbar-data';
 
 export const getActiveLinksGroupTitle = (urlPath: string) => {
   for (let i = 0; i < linksGroups.length; i += 1) {

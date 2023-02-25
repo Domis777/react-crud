@@ -3,8 +3,6 @@ import { styled } from '@mui/material';
 import { Swiper } from 'swiper/react';
 
 export const StyledSwiper = styled(Swiper)(({ theme }) => ({
-  width: '100%',
-  height: '100%',
   border: `5px solid ${theme.palette.primary.main}`,
   borderRadius: '20px',
   color: theme.palette.common.white,
@@ -26,6 +24,7 @@ export const StyledSwiper = styled(Swiper)(({ theme }) => ({
     height: '40px',
     background: theme.palette.primary.dark,
     opacity: 0.7,
+    top: 0,
   },
   '.swiper-pagination-bullet-active': {
     color: theme.palette.common.white,
