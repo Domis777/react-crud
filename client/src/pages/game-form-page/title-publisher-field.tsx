@@ -3,10 +3,14 @@ import { Box, TextField, TextFieldProps } from '@mui/material';
 
 type GameFieldProps = {
   color: TextFieldProps['color']
+  titleValue?: string
+  PublisherValue?: string
 };
 
 const GameField: React.FC<GameFieldProps> = ({
   color,
+  titleValue,
+  PublisherValue,
 }) => (
   <Box sx={{
     display: 'flex',
@@ -21,6 +25,7 @@ const GameField: React.FC<GameFieldProps> = ({
       label="Title"
       name="title"
       size="small"
+      defaultValue={titleValue}
       color={color}
     />
     <TextField
@@ -29,6 +34,7 @@ const GameField: React.FC<GameFieldProps> = ({
       label="Publisher"
       name="publisher"
       size="small"
+      defaultValue={PublisherValue}
       color={color}
     />
   </Box>

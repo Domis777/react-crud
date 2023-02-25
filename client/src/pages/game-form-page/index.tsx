@@ -23,20 +23,26 @@ const GameFormPage = () => {
   const navigate = useNavigate();
   const [game, loadingGameData] = useGame(id);
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
+  const mode = id !== undefined ? 'update' : 'create';
   const {
     title,
     btnText,
     color,
     colorMain,
-  } = getModeData(id !== undefined ? 'update' : 'create');
+  } = getModeData(mode);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
     try {
       const values = getGamesFromData(formRef.current);
-      await ApiService.createGame(values);
-      navigate(routes.HomePage);
+      if (mode === 'create') {
+        await ApiService.createGame(values);
+        navigate(routes.HomePage);
+      } else {
+        await ApiService.updateGame(id, { ...values });
+        navigate(routes.HomePage);
+      }
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);
@@ -47,9 +53,6 @@ const GameFormPage = () => {
   };
 
   if (loadingGameData) return null;
-
-  console.log('Updating Data');
-  console.log(game);
 
   return (
     <Styled.StyledAddLayout>
@@ -62,17 +65,28 @@ const GameFormPage = () => {
         >
           <SportsEsportsIcon sx={{ fontSize: 50 }} color={color} />
           <Typography variant="h5" color={colorMain}>{title}</Typography>
-          <GameField color={color} />
+          <GameField
+            color={color}
+            titleValue={game?.title}
+            PublisherValue={game?.information.publisher}
+          />
           <GameCheckbox
             paperColor={colorMain}
             CheckboxColor={color}
+            isCheckGenres={game?.information.genres}
+            isCheckPlatforms={game?.information.platforms}
           />
-          <GameNumberField color={color} />
+          <GameNumberField
+            color={color}
+            ratingValue={game?.metacritic}
+            priceValue={game?.price.slice(0, -1)}
+          />
           <GameImageField
             FieldColor={color}
             iconColor={color}
             TypoColor={colorMain}
             btnColor={color}
+            imageValue={game?.image}
           />
           <GameIconButton
             btnText={btnText}

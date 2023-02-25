@@ -21,6 +21,7 @@ type GameImageFieldProps = {
   TypoColor: TypographyProps['color']
   iconColor: IconProps['color']
   btnColor: IconButtonProps['color']
+  imageValue?: string[]
 };
 
 const GameImageField: React.FC<GameImageFieldProps> = ({
@@ -28,13 +29,23 @@ const GameImageField: React.FC<GameImageFieldProps> = ({
   TypoColor,
   iconColor,
   btnColor,
+  imageValue,
 }) => {
-  const [imgFieldIds, setImgFieldIds] = React.useState<string[]>(uniqId);
+  const imgMap = React.useMemo(() => imageValue && imageValue
+    .reduce<{ [key: string]: string }>((prevMap, img) => ({
+    ...prevMap,
+    [createId()]: img,
+  }), {}), [imageValue]);
+
+  const [
+    imgFieldIds,
+    setImgFieldIds,
+  ] = React.useState<string[]>((imgMap && Object.keys(imgMap)) || uniqId);
 
   const addImgField = () => setImgFieldIds([...imgFieldIds, createId()]);
-  const deleteImgField = (ids: string) => {
+  const deleteImgField = (id: string) => {
     if (imgFieldIds.length > 1) {
-      setImgFieldIds([...imgFieldIds.filter((imgId) => imgId !== ids)]);
+      setImgFieldIds([...imgFieldIds.filter((imgId) => imgId !== id)]);
     }
   };
 
@@ -68,14 +79,15 @@ const GameImageField: React.FC<GameImageFieldProps> = ({
         </IconButton>
       </Stack>
       <Stack sx={{ gap: 2, width: 1 }}>
-        {imgFieldIds.map((ids) => (
+        {imgFieldIds.map((id) => (
           <TextField
-            key={ids}
+            key={id}
             variant="filled"
             fullWidth
             label="Image"
             name="image"
             size="small"
+            defaultValue={imgMap && imgMap[id]}
             color={FieldColor}
             InputProps={{
               endAdornment: (
@@ -83,7 +95,7 @@ const GameImageField: React.FC<GameImageFieldProps> = ({
                   <IconButton
                     sx={{ border: 2, p: '5px' }}
                     color="error"
-                    onClick={() => deleteImgField(ids)}
+                    onClick={() => deleteImgField(id)}
                   >
                     <DeleteOutlineIcon color="error" />
                   </IconButton>
