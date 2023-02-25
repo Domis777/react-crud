@@ -1,4 +1,3 @@
-/* eslint-disable no-alert */
 import React from 'react';
 import {
   Stack,
@@ -16,7 +15,7 @@ import * as Styled from './styled/styled';
 import GameIconButton from './icon-button';
 import getGamesFromData from './helper';
 import useGame from '../../hooks/use-game';
-import getModeData from './data/data';
+import { getModeData } from './data/form-data';
 
 const GameFormPage = () => {
   const { id } = useParams();
@@ -47,7 +46,7 @@ const GameFormPage = () => {
       if (error instanceof Error) {
         alert(error.message);
       } else {
-        alert('Error on formn submit. Contact system administrator.');
+        alert('Error on form submit. Contact system administrator.');
       }
     }
   };

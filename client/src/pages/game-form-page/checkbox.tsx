@@ -6,7 +6,7 @@ import {
   Typography,
   CheckboxProps,
 } from '@mui/material';
-import { platform, genres } from '../form-data';
+import { platform, genres } from './data/form-data';
 import * as Styled from './styled/checkbox-styled';
 
 type GameCheckboxProps = {
