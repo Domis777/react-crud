@@ -16,12 +16,19 @@ import * as Styled from './styled';
 import GameIconButton from './icon-button';
 import getGamesFromData from './helper';
 import useGame from '../../components/hooks/use-game';
+import getModeData from './data';
 
 const GameFormPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [game, loadingGameData] = useGame(id);
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
+  const {
+    title,
+    btnText,
+    color,
+    colorMain,
+  } = getModeData(id !== undefined ? 'update' : 'create');
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -41,22 +48,34 @@ const GameFormPage = () => {
 
   if (loadingGameData) return null;
 
+  console.log('Updating Data');
+  console.log(game);
+
   return (
     <Styled.StyledAddLayout>
-      <Styled.StyledPaper>
+      <Styled.StyledPaper sx={{ borderColor: colorMain }}>
         <Stack
           sx={{ gap: 2, alignItems: 'center' }}
           component="form"
           onSubmit={handleSubmit}
           ref={formRef}
         >
-          <SportsEsportsIcon sx={{ fontSize: 50 }} color={id !== undefined ? 'warning' : 'primary'} />
-          <Typography variant="h5" color="primary">{id !== undefined ? 'Update Video Game' : 'Add new Video Game'}</Typography>
-          <GameField />
-          <GameCheckbox />
-          <GameNumberField />
-          <GameImageField />
+          <SportsEsportsIcon sx={{ fontSize: 50 }} color={color} />
+          <Typography variant="h5" color={colorMain}>{title}</Typography>
+          <GameField color={color} />
+          <GameCheckbox
+            paperColor={colorMain}
+            CheckboxColor={color}
+          />
+          <GameNumberField color={color} />
+          <GameImageField
+            FieldColor={color}
+            iconColor={color}
+            TypoColor={colorMain}
+            btnColor={color}
+          />
           <GameIconButton
+            btnText={btnText}
             onClick={() => navigate(routes.HomePage)}
           />
         </Stack>

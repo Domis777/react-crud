@@ -5,16 +5,30 @@ import {
   IconButton,
   Stack,
   Typography,
+  TypographyProps,
+  IconProps,
+  TextFieldProps,
+  IconButtonProps,
 } from '@mui/material';
 import createId from 'uniqid';
 import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
-import { useParams } from 'react-router-dom';
 
 const uniqId = [createId()];
 
-const GameImageField = () => {
-  const { id } = useParams();
+type GameImageFieldProps = {
+  FieldColor: TextFieldProps['color']
+  TypoColor: TypographyProps['color']
+  iconColor: IconProps['color']
+  btnColor: IconButtonProps['color']
+};
+
+const GameImageField: React.FC<GameImageFieldProps> = ({
+  FieldColor,
+  TypoColor,
+  iconColor,
+  btnColor,
+}) => {
   const [imgFieldIds, setImgFieldIds] = React.useState<string[]>(uniqId);
 
   const addImgField = () => setImgFieldIds([...imgFieldIds, createId()]);
@@ -36,17 +50,16 @@ const GameImageField = () => {
           sx={{
             border: 3,
             borderRadius: '5px',
-            borderColor: `${id !== undefined ? 'warning.main' : 'primary.main'}`,
             p: '5px',
             mr: 0.5,
           }}
-          color="primary"
+          color={btnColor}
           onClick={() => addImgField()}
         >
-          <AddPhotoAlternateOutlinedIcon color={id !== undefined ? 'warning' : 'primary'} />
+          <AddPhotoAlternateOutlinedIcon color={iconColor} />
           <Typography
             component="legend"
-            color={id !== undefined ? 'warning.main' : 'primary.main'}
+            color={TypoColor}
             fontWeight="600"
             sx={{ display: 'flex', alignItems: 'center' }}
           >
@@ -63,6 +76,7 @@ const GameImageField = () => {
             label="Image"
             name="image"
             size="small"
+            color={FieldColor}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end" sx={{ gap: 0.5 }}>

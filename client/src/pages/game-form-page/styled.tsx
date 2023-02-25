@@ -23,7 +23,6 @@ export const StyledPaper = styled(MuiPaper)(({ theme }) => ({
   padding: theme.spacing(3),
   elevation: 6,
   border: '3px solid',
-  borderColor: theme.palette.primary.main,
   boxShadow: '5px 5px 10px 0 common.black',
   borderRadius: '15px',
   [theme.breakpoints.up('sm')]: {

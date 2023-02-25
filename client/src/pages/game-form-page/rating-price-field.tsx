@@ -1,7 +1,13 @@
 import React from 'react';
-import { TextField, Stack } from '@mui/material';
+import { TextField, Stack, TextFieldProps } from '@mui/material';
 
-const GameNumberField = () => (
+type GameNumberFieldProps = {
+  color: TextFieldProps['color']
+};
+
+const GameNumberField: React.FC<GameNumberFieldProps> = ({
+  color,
+}) => (
   <Stack direction="row" justifyContent="space-between" gap={2} width={1}>
     <TextField
       variant="filled"
@@ -9,6 +15,7 @@ const GameNumberField = () => (
       label="Rating 1 - 100"
       name="rating"
       size="small"
+      color={color}
     />
     <TextField
       variant="filled"
@@ -16,6 +23,7 @@ const GameNumberField = () => (
       label="Price"
       name="price"
       size="small"
+      color={color}
     />
   </Stack>
 );
