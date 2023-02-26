@@ -32,16 +32,9 @@ const SingleGamePage = () => {
 
   return (
     <Container sx={{ mt: 3, mb: 3 }}>
-      <Paper sx={{
-        p: 3,
-        borderRadius: '15px',
-        border: 4,
-        borderColor: 'primary.main',
-        boxShadow: '5px 5px 10px 0',
-      }}
-      >
+      <Styled.PaperContainer>
         <Styled.BoxContainer>
-          <Box sx={{ width: 1, height: 'none' }}>
+          <Box sx={{ width: 1 }}>
             <Styled.StyledSwiper
               pagination={pagination}
               navigation
@@ -67,7 +60,7 @@ const SingleGamePage = () => {
             rating={game.metacritic}
           />
         </Styled.BoxContainer>
-      </Paper>
+      </Styled.PaperContainer>
     </Container>
   );
 };

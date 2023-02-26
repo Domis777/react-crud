@@ -8,6 +8,15 @@ export const BoxContainer = styled(MuiBox)(({ theme }) => ({
   gap: theme.spacing(3),
 }));
 
+export const PaperContainer = styled(MuiBox)(({ theme }) => ({
+  padding: theme.spacing(3),
+  margin: theme.spacing(3),
+  borderRadius: '15px',
+  border: '5px solid',
+  borderColor: theme.palette.primary.main,
+  boxShadow: '5px 5px 10px 0',
+}));
+
 export const StyledSwiper = styled(Swiper)(({ theme }) => ({
   border: `5px solid ${theme.palette.primary.main}`,
   borderRadius: '20px',
