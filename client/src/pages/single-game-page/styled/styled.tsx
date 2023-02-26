@@ -1,13 +1,23 @@
-/* eslint-disable import/prefer-default-export */
-import { styled } from '@mui/material';
+import { styled, Box as MuiBox } from '@mui/material';
 import { Swiper } from 'swiper/react';
+
+export const BoxContainer = styled(MuiBox)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: theme.spacing(3),
+}));
 
 export const StyledSwiper = styled(Swiper)(({ theme }) => ({
   border: `5px solid ${theme.palette.primary.main}`,
   borderRadius: '20px',
   color: theme.palette.common.white,
   fontSize: '25px',
+  height: 'none',
   boxShadow: `5px 5px 12px 0 ${theme.palette.common.black}`,
+  '.swiper-slide': {
+    height: 'auto',
+  },
   '.swiper-button-next': {
     color: theme.palette.primary.dark,
     fontWeight: 900,

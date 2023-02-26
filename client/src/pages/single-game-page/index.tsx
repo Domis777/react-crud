@@ -5,7 +5,6 @@ import {
   Box,
   Paper,
   Container,
-  Typography,
 } from '@mui/material';
 import { Pagination, Navigation } from 'swiper';
 import Img from 'components/ui/img';
@@ -13,9 +12,9 @@ import { SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Rating } from '@mui/lab';
-import * as Styled from './styled';
+import * as Styled from './styled/styled';
 import useGame from '../../hooks/use-game';
+import SingleGameTypography from './single-game-typography';
 
 const SingleGamePage = () => {
   const { id } = useParams();
@@ -31,8 +30,6 @@ const SingleGamePage = () => {
   if (id === undefined) return <Navigate to={routes.HomePage} />;
   if (game === undefined) return null;
 
-  const raitings = game.metacritic / 20;
-
   return (
     <Container sx={{ mt: 3, mb: 3 }}>
       <Paper sx={{
@@ -43,7 +40,7 @@ const SingleGamePage = () => {
         boxShadow: '5px 5px 10px 0',
       }}
       >
-        <Box display="flex" flexDirection="column" alignItems="center" gap={3}>
+        <Styled.BoxContainer>
           <Box sx={{ width: 1, height: 'none' }}>
             <Styled.StyledSwiper
               pagination={pagination}
@@ -61,81 +58,15 @@ const SingleGamePage = () => {
               ))}
             </Styled.StyledSwiper>
           </Box>
-          <Typography
-            gutterBottom
-            variant="h3"
-            textAlign="center"
-            align="center"
-          >
-            {game.title}
-          </Typography>
-          <Typography
-            variant="h5"
-            color="primary"
-            align="center"
-          >
-            Genres:
-          </Typography>
-          <Typography
-            variant="h5"
-            color="text.secondary"
-            align="center"
-          >
-            {game.information.genres.join(', ')}
-          </Typography>
-          <Typography
-            variant="h5"
-            color="primary"
-            align="center"
-          >
-            Platforms:
-          </Typography>
-          <Typography
-            variant="h5"
-            color="text.secondary"
-            align="center"
-          >
-            {game.information.platforms.join(', ')}
-          </Typography>
-          <Typography
-            variant="h5"
-            color="primary"
-            align="center"
-          >
-            Publisher:
-          </Typography>
-          <Typography
-            variant="h5"
-            color="text.secondary"
-            align="center"
-          >
-            {game.information.publisher}
-          </Typography>
-          <Typography
-            variant="body1"
-            fontSize="large"
-            color="warning.light"
-            align="center"
-          >
-            {`Rating: ${game.metacritic}`}
-          </Typography>
-          <Rating
-            name="read-only"
-            value={raitings}
-            precision={0.25}
-            size="large"
-            readOnly
+          <SingleGameTypography
+            title={game.title}
+            genres={game.information.genres.join(', ')}
+            platforms={game.information.platforms.join(', ')}
+            publisher={game.information.publisher}
+            price={game.price}
+            rating={game.metacritic}
           />
-
-          <Typography
-            variant="body1"
-            fontSize="large"
-            color="success.main"
-            align="center"
-          >
-            {`Price: ${game.price}`}
-          </Typography>
-        </Box>
+        </Styled.BoxContainer>
       </Paper>
     </Container>
   );
