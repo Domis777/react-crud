@@ -8,6 +8,7 @@ import ImgCard from './img-card';
 import TypographyCard from './typography-card';
 import RatingPriceCard from './rating-price-card';
 import InfoBuyButtonCard from './info-buy-button-card';
+import ratings from '../../rating-count';
 
 type GamesCardProps = GamesModel & {
   onDelete: VoidFunction
@@ -23,8 +24,6 @@ const GamesCard: React.FC<GamesCardProps> = ({
   onDelete,
 }) => {
   const navigate = useNavigate();
-
-  const ratings = metacritic / 20;
 
   return (
     <VideoGameCard>
@@ -45,7 +44,7 @@ const GamesCard: React.FC<GamesCardProps> = ({
       </Box>
       <Box>
         <RatingPriceCard
-          ratings={ratings}
+          ratings={ratings(metacritic)}
           price={price}
         />
         <InfoBuyButtonCard
