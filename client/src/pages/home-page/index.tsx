@@ -2,9 +2,9 @@ import React from 'react';
 import ApiService from 'services/api-services';
 import { Container, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import GamesCard from './games-card';
-import * as Styled from './styled';
+import GamesCard from './game-card/games-card';
 import routes from '../../navigation/routes';
+import GamesGrid from './styled/styled';
 
 const HomePage = () => {
   const [games, setGames] = React.useState<GamesModel[]>([]);
@@ -33,7 +33,7 @@ const HomePage = () => {
       >
         Add
       </Button>
-      <Styled.GamesGrid>
+      <GamesGrid>
         { games.map((game) => (
           <GamesCard
             key={game.id}
@@ -41,7 +41,7 @@ const HomePage = () => {
             onDelete={() => deleteGame(game.id)}
           />
         )) }
-      </Styled.GamesGrid>
+      </GamesGrid>
     </Container>
   );
 };
