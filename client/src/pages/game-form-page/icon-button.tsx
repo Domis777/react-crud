@@ -15,6 +15,7 @@ const GameIconButton: React.FC<GameIconButtonProps> = ({
   <Styled.StyledIconButtonContainer>
     <Styled.StyledIconButton
       color="success"
+      type="submit"
     >
       <Styled.StyledTypography
         color="success"
