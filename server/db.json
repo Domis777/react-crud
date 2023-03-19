@@ -1,29 +1,18 @@
 {
   "videoGames": [
     {
-      "id": 1,
-      "title": "God of War Ragnarök",
-      "information": {
-        "platforms" : ["PlayStation 5", "PlayStation 4"],
-        "publisher" : "Sony Interactive Entertainment",
-        "genres": ["Action-adventure", "Hack and slash"]
-      },
-      "price": "69.99$",
-      "image": [
-        "https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/aqZdSwWyy9JcQ66BxHDKrky6.jpg",
-        "https://cdn.arstechnica.net/wp-content/uploads/2022/11/God-of-War-Ragnarok_20221017164959-scaled.jpg",
-        "https://baitukas.lt/wp-content/uploads/2022/11/1-2.jpg",
-        "https://cdn.mos.cms.futurecdn.net/o2h4wsfCpYyXirdEBLCJ2n.jpg"
-      ],
-      "metacritic": 94
-    },
-    {
       "id": 2,
       "title": "Dead Space Remake",
       "information": {
-        "platforms" : ["PlayStation 5", "Xbox Series X/S", "Windows"],
-        "publisher" : "Electronic Arts",
-        "genres": ["Survival horror"]
+        "platforms": [
+          "PlayStation 5",
+          "Xbox Series X/S",
+          "Windows"
+        ],
+        "publisher": "Electronic Arts",
+        "genres": [
+          "Survival horror"
+        ]
       },
       "price": "69.99$",
       "image": [
@@ -38,9 +27,18 @@
       "id": 3,
       "title": "Castillo Protocol",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S"],
-        "publisher" : "Krafton",
-        "genres": ["Survival horror", "Action"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S"
+        ],
+        "publisher": "Krafton",
+        "genres": [
+          "Survival horror",
+          "Action"
+        ]
       },
       "price": "59.99$",
       "image": [
@@ -55,9 +53,18 @@
       "id": 4,
       "title": "Elden Ring",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S"],
-        "publisher" : "Bandai Namco Entertainment",
-        "genres": ["Action", "Role-playing"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S"
+        ],
+        "publisher": "Bandai Namco Entertainment",
+        "genres": [
+          "Action",
+          "Role-playing"
+        ]
       },
       "price": "39.99$",
       "image": [
@@ -72,9 +79,18 @@
       "id": 5,
       "title": "Red Dead Redemption 2",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S"],
-        "publisher" : "Rockstar Games",
-        "genres": ["Action", "Adventure"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S"
+        ],
+        "publisher": "Rockstar Games",
+        "genres": [
+          "Action",
+          "Adventure"
+        ]
       },
       "price": "49.99$",
       "image": [
@@ -89,9 +105,18 @@
       "id": 6,
       "title": "Grand Theft Auto V",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S"],
-        "publisher" : "Rockstar Games",
-        "genres": ["Action", "Adventure"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S"
+        ],
+        "publisher": "Rockstar Games",
+        "genres": [
+          "Action",
+          "Adventure"
+        ]
       },
       "price": "29.99$",
       "image": [
@@ -106,9 +131,15 @@
       "id": 7,
       "title": "Stray",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows"],
-        "publisher" : "Annapurna Interactive",
-        "genres": ["Adventure"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows"
+        ],
+        "publisher": "Annapurna Interactive",
+        "genres": [
+          "Adventure"
+        ]
       },
       "price": "19.99$",
       "image": [
@@ -123,9 +154,19 @@
       "id": 8,
       "title": "The Witcher 3: Wild Hunt",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
-        "publisher" : "CD Projekt",
-        "genres": ["Action", "Role-playing"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S",
+          "Nintendo Switch"
+        ],
+        "publisher": "CD Projekt",
+        "genres": [
+          "Action",
+          "Role-playing"
+        ]
       },
       "price": "39.99$",
       "image": [
@@ -140,9 +181,19 @@
       "id": 9,
       "title": "Monster Hunter Rise",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
-        "publisher" : "Capcom",
-        "genres": ["Action", "Adventure"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S",
+          "Nintendo Switch"
+        ],
+        "publisher": "Capcom",
+        "genres": [
+          "Action",
+          "Adventure"
+        ]
       },
       "price": "39.99$",
       "image": [
@@ -157,9 +208,19 @@
       "id": 10,
       "title": "Hogwarts Legacy",
       "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
-        "publisher" : "Warner Bros. Games",
-        "genres": ["Action", "Role-playing"]
+        "platforms": [
+          "PlayStation 4",
+          "PlayStation 5",
+          "Windows",
+          "Xbox One",
+          "Xbox Series X/S",
+          "Nintendo Switch"
+        ],
+        "publisher": "Warner Bros. Games",
+        "genres": [
+          "Action",
+          "Role-playing"
+        ]
       },
       "price": "69.99$",
       "image": [
@@ -169,40 +230,6 @@
         "https://assets-prd.ignimgs.com/2022/03/17/screen-shot-2022-03-17-at-4-02-38-pm-1647551164721.png"
       ],
       "metacritic": 82
-    },
-    {
-      "id": 11,
-      "title": "It Takes Two",
-      "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5", "Windows", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
-        "publisher" : "Electronic Arts",
-        "genres": ["Action", "Adventure", "Platform"]
-      },
-      "price": "19.99$",
-      "image": [
-        "https://i.ytimg.com/vi/ohClxMmNLQQ/maxresdefault.jpg",
-        "https://cdn.cloudflare.steamstatic.com/steam/apps/1426210/ss_a15164ddd357ab3c0b2aff575a6b215b2d91b406.1920x1080.jpg?t=1666121755",
-        "https://thenerdstash.com/wp-content/uploads/2022/02/it-takes-two-game-of-year.jpg",
-        "https://variety.com/wp-content/uploads/2022/04/It-Takes-Two-movie-e1650407466377.jpg"
-      ],
-      "metacritic": 89
-    },
-    {
-      "id": 12,
-      "title": "Horizon Forbidden West",
-      "information": {
-        "platforms" : ["PlayStation 4", "PlayStation 5"],
-        "publisher" : "Sony Interactive Entertainment",
-        "genres": ["Action", "Role-playing"]
-      },
-      "price": "69.99$",
-      "image": [
-        "https://image.api.playstation.com/vulcan/ap/rnd/202107/3100/HO8vkO9pfXhwbHi5WHECQJdN.png",
-        "https://cdn.vox-cdn.com/thumbor/KjBekT_U49q6FhoRssUAk6ZqVA8=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23236810/Horizon_Forbidden_West_20220211184602.jpg",
-        "https://s.yimg.com/uu/api/res/1.2/U1XZcBwFvGDIo3.6nRl2FQ--~B/aD0xNDI1O3c9MjUzNDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2022-02/439b8650-8f59-11ec-8f7b-244cd88c3146.cf.jpg",
-        "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/31377b14b840107c6600ab35a1aed332.jpg"
-      ],
-      "metacritic": 88
     }
   ]
 }
